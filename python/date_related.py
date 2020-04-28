@@ -1,4 +1,4 @@
-## Between date range
+# Between date range
 dates = []
 from datetime import timedelta, date
 def daterange(date1, date2):
@@ -12,4 +12,4 @@ for dt in daterange(start_dt, end_dt):
 
 print(dates)
 
--------------------------------------------------------------------------
+#-------------------------------------------------------------------------
