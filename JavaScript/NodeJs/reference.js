@@ -62,3 +62,9 @@ cp.exec("ls", (err, data) => {
 /*############ ESLint and prettier for code formatting in VSCode and auto save ###############*/
 // Watch he below video gives you better idea
 // https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/setting-up-eslint-and-prettier?autoplay=true&pathUrn=urn%3Ali%3AlyndaLearningPath%3A5b32b6d5498e4ef39c04c55c
+
+/*############ Working with file's ###############*/
+const fs = require("fs");
+const util = require("util");
+const readFile = util.promisify(fs.readFile);
+const writeFile = util.promisify(fs.writeFile);
