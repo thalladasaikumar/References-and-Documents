@@ -1,4 +1,3 @@
-
 Data Science cheat sheet -> https://github.com/abhat222/Data-Science--Cheat-Sheet
 
 Head First Books Series -> https://github.com/abhinavkorpal/head_first_series_books
@@ -10,3 +9,5 @@ For few references: https://github.com/abhinavkorpal
 Programming Notes for Professionals books : https://goalkicker.com/
 
 Algorithms Visualizations : https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+
+Generate Random Data : [Mackaroo](https://www.mockaroo.com/)
