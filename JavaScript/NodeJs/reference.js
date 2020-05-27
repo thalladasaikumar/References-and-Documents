@@ -112,4 +112,8 @@ try {
 .put    | Update a resource
 .delete | Delete a resource
 
+
+REST APIs with Hapi : Hapi is an open-source and rich Node. js framework created and actively maintained by Eran Hammer. Hapi is a rich framework for building applications and services. It enables developers to focus on writing reusable application logic instead of spending time building infrastructure
+guide to Hapi: https://hapi.dev/tutorials/gettingstarted/?lang=en_US
+
 */
