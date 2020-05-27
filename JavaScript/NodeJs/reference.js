@@ -102,3 +102,14 @@ try {
 
 // Creating a error page:
 // https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/creating-an-error-page?autoplay=true&pathUrn=urn%3Ali%3AlyndaLearningPath%3A5b32b6d5498e4ef39c04c55c
+
+/*############ REST APIs ###############*/
+/* CRUD -> Create, Update, Delete
+ Verb   |      Summary
+--------|------------------
+.get    | Request a resource
+.post   | Create a resource
+.put    | Update a resource
+.delete | Delete a resource
+
+*/
