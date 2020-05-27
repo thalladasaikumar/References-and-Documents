@@ -68,3 +68,37 @@ const fs = require("fs");
 const util = require("util");
 const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
+
+/*############ Template variables available for global ###############*/
+// Type-1 using middleware
+app.use((req, res, next) => {
+  res.locals.someVariable = "hello";
+  return next();
+});
+
+// Type-2
+app.locals.siteName = "Some website name";
+
+/*############ Errors handling ###############*/
+// Throwing error,
+// don't throw error in async block this might take the whole website down, for solution find below
+app.get("/thow", (req, res) => {
+  throw new Error("Something went wrong!!!");
+});
+
+// Throwing error in Async block example
+app.get("/thow", (req, res, next) => {
+  setTimeout(() => {
+    return next(new Error("Something went wrong!!!"));
+  }, 500);
+});
+
+// try catch
+try {
+  // set of operations
+} catch (err) {
+  // set of operations
+}
+
+// Creating a error page:
+// https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/creating-an-error-page?autoplay=true&pathUrn=urn%3Ali%3AlyndaLearningPath%3A5b32b6d5498e4ef39c04c55c
