@@ -1,3 +1,11 @@
+//------------------------------ Express -----------https://expressjs.com/------------------
+/* Creating a express nodeJs template application using "express-generator" package: 
+  npm install express-generator -g -> to install express generator.
+  express -h -> quick look on different ways to create a project using any engine support
+
+  express --view ejs -> create a boiler plate for ejs nodeJs project structure 
+*/
+
 /*############ Different ways to Export Modules ###############*/
 
 const getName = () => {
@@ -99,6 +107,8 @@ try {
 } catch (err) {
   // set of operations
 }
+
+// --------------------- End of Express ----------------------------------------
 
 // Creating a error page:
 // https://www.linkedin.com/learning/building-a-website-with-node-js-and-express-js-3/creating-an-error-page?autoplay=true&pathUrn=urn%3Ali%3AlyndaLearningPath%3A5b32b6d5498e4ef39c04c55c
