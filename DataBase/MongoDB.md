@@ -40,3 +40,22 @@ Small exampe on find the count of all the array elements in a collection grouped
 | 1. Full copies of the dataset     | 1. Partition data onto multiple servers |
 | 2. Primary and secondary servers. | 2. Server farm friendly                 |
 | 3. Automatic failover             | 3. Scalability and performance          |
+
+---
+
+### Mongoose
+
+For reference on [Mongoose](https://mongoosejs.com/docs/index.html)
+
+SchemaTypes:
+
+1. String
+2. Number
+3. Date
+4. Buffer
+5. Boolean
+6. Mixed
+7. ObjectId
+8. Array
+9. Decimal128
+10. Map
