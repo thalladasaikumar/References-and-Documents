@@ -1,14 +1,18 @@
 1. for any number to find even or odd check for the rightmost bit is 1 or 0.
+
    (num & 1) == 0 -> Even
    (num & 1) == 1 -> Odd
 
 2. Check if the number is a power of 2?
+
    (num & num-1) == 0 -> then num is a power of 2.
 
 3. Arithmetic Left Shift by 1?
+
    (num << 1) -> gives output of num\*2
 
 4. Arithmetic Right Shift by 1?
+
    (num >> 1) -> gives output of num/2
 
 Usefull resource :
