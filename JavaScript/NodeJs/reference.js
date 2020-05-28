@@ -1,5 +1,5 @@
 //------------------------------ Express -----------https://expressjs.com/------------------
-/* Creating a express nodeJs template application using "express-generator" package: 
+/* Creating a express nodeJs template application using "express-generator" package: https://expressjs.com/en/starter/generator.html
   npm install express-generator -g -> to install express generator.
   express -h -> quick look on different ways to create a project using any engine support
 
@@ -37,6 +37,41 @@ const reference = require("./reference");
 // Type:2
 // Destructuring assignment, we can cherry-pick what we want to import:
 const { getName, dob } = require("./reference");
+
+// ################## Parameters ######################
+app.get("/path/:id", (req, res) => {
+  console.log(req.params.id);
+});
+
+app.get("/path/:category/:id", (req, res) => {
+  console.log(req.params.id);
+});
+
+// ########### Route handlers using middlewares ########
+app.get(
+  "/path/:id",
+  (req, res, next) => {
+    console.log(req.params.id);
+    next();
+  },
+  (req, res) => {
+    console.log("other handling!");
+  }
+);
+// we can try multiple routes
+
+// ############## Routing: Chaning ###################
+app
+  .route("/path")
+  .get((req, res) => {
+    console.log("GET Method");
+  })
+  .put((req, res) => {
+    console.log("PUT Method");
+  })
+  .delete((req, res) => {
+    console.log("DELETE Method");
+  });
 
 /*############ Custom Events with EventEmitter ###############*/
 const events = require("events");
@@ -107,6 +142,29 @@ try {
 } catch (err) {
   // set of operations
 }
+
+// Error handling using middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send(`Alert!!! ${err.stack}`);
+});
+
+// ############## DEBUG in ExpressJs #################
+/* debug using command:
+ * DEBUG=express:* nodemon app.js
+ * set DEBUG=express:* & nodemon app.js -> for windows package.json script
+ */
+
+// Using express behind a proxy: http://expressjs.com/en/guide/behind-proxies.html
+/* ### Express security overview ##########
+  1. Always keep upto date and secured dependencies
+  2. Use TLS for sensitive data
+  3. Use Helmet's collection of security middelware
+  4. Use cookies securely
+ */
+
+// ########### Real Time applications examples #################
+// 1. socket.io : for real time chatbox | https://socket.io/
 
 // --------------------- End of Express ----------------------------------------
 
