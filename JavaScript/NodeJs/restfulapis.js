@@ -53,5 +53,15 @@ export default routes;
 */
 
 /* Security features for APIs
+  Adding an authorization token for login purpose
     1. JWT -> https://jwt.io/ (Good for api data security)
 */
+
+// ####### Top Five Security Threats ##################
+/** more on : https://owasp.org/www-project-top-ten/
+ * 1. Injection attacks
+ * 2. Broken authentication
+ * 3. Sensitive data exposure
+ * 4. XML entities
+ * 5. Broken access control
+ */
