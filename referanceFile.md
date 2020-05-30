@@ -13,3 +13,7 @@ Algorithms Visualizations : [Algos-Visualizations](https://www.cs.usfca.edu/~gal
 Generate Random Data : [Mackaroo](https://www.mockaroo.com/)
 
 [Socket.IO](https://socket.io/) enables real-time, bidirectional and event-based communication.
+
+[Cheat Sheets](https://cheatography.com/) for everything approximatly
+
+[Cheat Sheets programming](https://cheatography.com/programming/) for everything approximatly
