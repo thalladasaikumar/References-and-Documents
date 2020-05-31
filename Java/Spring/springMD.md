@@ -4,7 +4,7 @@ Inversion of Control(IoC) is a principle in software engineering by which the co
 
 ### Spring Container example:
 
-![Spring Container](\images\spring_container.png)
+![Spring Container](/images/spring_container.png)
 
 - Primary functions
   1. Create and manage objects (Inversion of Control)
