@@ -46,3 +46,62 @@ Inversion of Control(IoC) is a principle in software engineering by which the co
    Coach theCoach = context.getBean("myCoach", Coach.class);
 
 ## Dependency Injection:
+
+Dependency injection is a pattern through which to implement IoC, where the control being inverted is the setting of object's dependencies.
+
+### Injection Types:
+
+- There are many types of injection with spring, we will see two most common.
+  1. Constructor Injection.
+  2. Setter Injection
+
+### Development process - Constructor Injection:
+
+1. Define the dependency interface and class
+2. Create a constructor in your class for injections
+3. Configure the dependency injection in Spring config file.
+
+### Setting up constructor injection:
+
+We should use _\<constructor-arg ref = "myFortuneService"/\>_ in our Application Context.
+
+### Setting up setter injection:
+
+We should use _\<property name="fortuneService" ref="myFortuneService"\> \</property\>_ in our Application Context.
+
+### creating a properties file and using it in application context xml file.
+
+\<context:property-placeholder location="classpath:sport.properties"/\>
+
+## Bean Scopes
+
+- Default scope is **Singleton**
+
+  - What is Singleton?
+    - Spring container creates only one instance of the bean, by default
+    - It is cached in memory
+    - All the requests for the bean will return a SHARED refernce to the SAME bean.
+  - Explicitly Specify the Scope: using _scope="singleton"_
+
+  | Scope          | Description                                                  |
+  | -------------- | ------------------------------------------------------------ |
+  | Singleton      | Creates a single shared instance of the bean. Default scope  |
+  | prototype      | Creates a new bean instance for each container request       |
+  | request        | Scoped to an HTTP web request. Only used for web apps.       |
+  | session        | Scoped to an HTTP web session. Only used for web apps.       |
+  | global-session | Scoped to a global HTTP web session. Only used for web apps. |
+
+- Creating a Prototype Scope using _scope="prototype"_
+
+## Bean Lifecycle:
+
+![Bean Lifecycle](/Java/Spring/images/bean_lifecycle.png)
+
+### Bean Lifecycle Methods/Hooks:
+
+- You can add custom code during **bean initialization** using : _init-method="\<anyMethodName\>"_
+  - Calling custom business logic methods
+  - Setting up handles to resources(db, cockets, file, etc...)
+- You can add custom code during **bean destruction** using: _destroy-method="\<anyMethodName\>"_
+  - Calling custom business logic method
+  - Clean up handles to resources(db, sockets, fies etc.....)
