@@ -105,3 +105,47 @@ We should use _\<property name="fortuneService" ref="myFortuneService"\> \</prop
 - You can add custom code during **bean destruction** using: _destroy-method="\<anyMethodName\>"_
   - Calling custom business logic method
   - Clean up handles to resources(db, sockets, fies etc.....)
+
+### What are Java Annotations?
+
+- Special labels/markers added to Java
+  classes.
+- Provide meta-data about the class.
+- Processed at compile time or run-time for special processing.
+
+#### Annotations examples:
+
+- @Override
+
+### Why Spring Configuration
+
+with Annotations?
+
+- XML configuration can be verbose
+- Configure your Spring beans with
+  Annotations
+- Annotations minimizes the XML
+  configuration.
+
+This will enable component scanning: _\<context:component-scan base-package="com.thallada.com"\>\</context:component-scan\>_
+
+### Spring also supports default beanId's
+
+Default Bean Id's: the class name make the _first letter lowercase_.
+
+- ClassName: _TennisCoach_ -> Default Bean: _tennisCoach_
+
+## Spring Auto Wiring?
+
+- For dependency injection, Spring can use auto wiring.
+- Spring will look for a class that _matches_ the property.
+  - _matches by type:_ class or interface.
+- Spring will inject it automatically ...hence it is autowired.
+- If there are multiple matches?
+  Answer: Spring has special support to handle this case. Use the @Quanlifier anootation.
+
+### Autowiring Injection Types:
+
+1.  Constructor Injections.
+2.  Setter Injections.
+3.  Feild Injections.
