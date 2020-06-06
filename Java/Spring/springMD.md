@@ -148,4 +148,34 @@ Default Bean Id's: the class name make the _first letter lowercase_.
 
 1.  Constructor Injections.
 2.  Setter Injections.
-3.  Feild Injections.
+3.  Field Injections.
+
+### Bean Life cycle using annotations:
+
+- @PostConstruct -> Bean initialization
+- @PreDestroy -> Bean Destruction
+
+## Spring MVC:
+
+- Framework for building web applications in java.
+- Based on Model-View-Controller design pattern
+- Leverages features of the Core Spring Framework(IoC, DI)
+  ![Spring MVC](/Java/Spring/images/spring_mvc.png)
+
+[Spring MVC Documentation](www.luv2code.com/spring-mv-docs)
+
+#### Components of a Spring MVC Application:
+
+- A set of Web pages to layout UI components.
+- A collection of Spring beans(controllers, services, etc...).
+- Spring configuration(XML, Annotations or Java)
+- Most common View Template is JSP + JSTL
+- Other view templates supported:
+  - Thymeleaf, Groovy
+  - Velocity, Freemarker, etc...
+- [Spring MVC Views](www.luv2code.com/spring-mvc-views)
+
+#### Create Controller class
+
+- Annotate class with @Controller
+  - @Controller inherits from @Component ...supports scanning
